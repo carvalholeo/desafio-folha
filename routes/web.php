@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\StarSystemController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'StarSystemController@show')->name('index.index');
+Route::post('/', 'StarSystemController@form')->name('index.send');
