@@ -9,15 +9,15 @@
     @endforeach
 @endif
 
-@if ($message = Session::get('success'))
+@if ($message = Session::get('default'))
             <div class="alert alert-success alert-block">
                 <button type="button" class="close" data-dismiss="alert">×</button>	
                     {{ $message }}
             </div>
 @endif
 
-@if ($message = Session::get('error'))
-            <div class="alert alert-danger alert-block">
+@if ($message = Session::get('custom'))
+            <div class="alert alert-info alert-block">
                 <button type="button" class="close" data-dismiss="alert">×</button>	
                     {{ $message }}
             </div>

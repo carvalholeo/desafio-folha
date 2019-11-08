@@ -21,7 +21,7 @@
             </p>
             <hr />
         
-            <form method="POST" id="contactForm" action="{{ route('index') }}">
+            <form method="POST" id="contactForm" action="{{ route('index.send') }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
                     <label for="star">Sistema Estelar</label>
@@ -38,11 +38,11 @@
                 <p>Para brincar com outros sistemas estelares, digite as informações abaixo </p>
                 <div class="form-group">
                     <label for="customStar">Sistema Estelar</label>
-                    <input type="text" id="customStar" name="customStar" class="form-control" placeholder="Digite o nome de um sistema estelar" required>
+                    <input type="text" id="customStar" name="customStar" class="form-control" placeholder="Digite o nome de um sistema estelar">
                 </div>
                 <div class="form-group">
                     <label for="engineers">Quantidade de engenheiros</label>
-                    <input type="number" id="engineers" name="engineers" class="form-control" placeholder="Digite a quantidade de engenheiros" required min=1>
+                    <input type="number" id="engineers" name="engineers" class="form-control" placeholder="Digite a quantidade de engenheiros" min=1>
                 </div>
                 <button type="submit" class="btn btn-primary" id="submit">Enviar</button>
                 <button type="cancel" class="btn btn-danger" id="cancel">Apagar</button>
