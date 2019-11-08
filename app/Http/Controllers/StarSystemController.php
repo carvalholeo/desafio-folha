@@ -77,10 +77,10 @@ class StarSystemController extends Controller
 
         if($engineers == $counterCustomStar) {
             return $request->session()
-                    ->flash('customSuccess', "VOCÊ ACERTOU!! A quantidade de engenheiros para a estrela $customStar é $counterCustomStar");
+                    ->flash('customSuccess', "VOCÊ ACERTOU!!! A quantidade de engenheiros para a estrela $customStar é $counterCustomStar");
         } else {
             return $request->session()
-                    ->flash('customWrong', "Infelizmente, você errou. A quantidade de engenheiros para a estrela $customStar é $counterCustomStar");
+                    ->flash('customWrong', "Infelizmente, você errou :-C A quantidade de engenheiros para a estrela $customStar é $counterCustomStar");
         }
     }
 

@@ -2,7 +2,7 @@
     <a class="navbar-brand" href="{{ route('index.index') }}">
 
     <img src="{{ asset('storage/images/logo_folha.png') }}" class="rounded img-fluid"
-                                    alt="Logo da Folha de S.Paulo" title="Logo da Folha de S.Paulo">
+                                    alt="Logo da Folha de S. Paulo" title="Logo da Folha de S. Paulo">
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

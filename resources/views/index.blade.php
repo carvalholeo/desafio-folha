@@ -1,4 +1,4 @@
-@extends('layout.app', ["current" => "current"])
+@extends('layout.app', ["current" => "home"])
 
 @section('title', 'Destino dos Engenheiros | Desafio Folha de S.Paulo')
 
@@ -11,12 +11,12 @@
 @include('components.flash-messages')
 
             <div class="card-title">
-                <h2>Qual o nosso destino?</h2>
+                <h2>Qual o destino dos engenheiros?</h2>
             </div>
         </div>
         <div class="card-body">
-            <p class="text-justify">Sabendo-se que a resposta correta para o desafio é <strong>PROCION</strong>,
-             você pode testar outros nomes de sistemas estelares, junto com a quantidade de engenheiros e verificar
+            <p class="text-justify">Sabendo que a resposta correta para o desafio é <strong>PROCION</strong>,
+             você pode brincar com outros nomes de sistemas estelares, junto com a quantidade de engenheiros e verificar
               se está correto :)
             </p>
             <hr />
