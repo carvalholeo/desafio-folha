@@ -24,7 +24,7 @@
 @endif
 
 @if ($message = Session::get('customWrong'))
-            <div class="alert alert-danger alert-block">
+            <div class="alert alert-warning alert-block">
                 <button type="button" class="close" data-dismiss="alert">×</button>	
                     {{ $message }}
             </div>
