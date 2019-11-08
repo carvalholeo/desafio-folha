@@ -130,8 +130,16 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'star' => [
+            'required' => 'Você precisa escolher um Sistema Estelar na lista',
+            'string' => 'O campo Sistema Estelar deve ser um texto',
+        ],
+        'customStar' => [
+            'string' => 'O campo Sistema Estelar deve ser um texto',
+        ],
+        'engineers' =>[
+            'numeric' => 'O campo Quantidade de Engenheiros precisa ser um número',
+            'min' => 'O campo Quantidade de Engenheiros precisa de um valor igual ou maior que 0',
         ],
     ],
 
