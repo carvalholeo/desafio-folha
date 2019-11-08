@@ -14,7 +14,7 @@ class StarSystemController extends Controller
     private $counterCustomStar;
     private $starHasVowels;
 
-    private function calculateEngineers($star)
+    private function calculateEngineers(string $star) : int
     {
         $counter = 1;
         for ($i = 0; $i < strlen($star); $i++) {
@@ -39,7 +39,7 @@ class StarSystemController extends Controller
         return $counter;
     }
 
-    private function verifyIfExistsVowel($star)
+    private function verifyIfExistsVowel(string $star) : bool
     {
         $verifyStar = str_split($star);
 
@@ -63,7 +63,7 @@ class StarSystemController extends Controller
         return view('index');
     }
 
-    private function customStar($request)
+    private function customStar(Request $request) : void
     {
         $customStar = $request->input('customStar');
         $engineers = (int) $request->input('engineers');
@@ -79,18 +79,18 @@ class StarSystemController extends Controller
         }
 
         if($engineers == $counterCustomStar) {
-            return $request->session()
+            $request->session()
                     ->flash('customSuccess', "VOCÊ ACERTOU!!! A quantidade de engenheiros para a estrela $customStar é $counterCustomStar");
         } else {
-            return $request->session()
+            $request->session()
                     ->flash('customWrong', "Infelizmente, você errou :-C A quantidade de engenheiros para a estrela $customStar é $counterCustomStar");
         }
     }
 
     public function form(Request $request)
     {
-        $star = $request->input('star');
-        $counterDefaultStar = self::calculateEngineers($star);
+        $star = (string) $request->input('star');
+        $counterDefaultStar = (int) self::calculateEngineers($star);
         $request->session()->flash('default', "A quantidade de engenheiros para a estrela $star é $counterDefaultStar");
 
         if ($request->filled('customStar'))
