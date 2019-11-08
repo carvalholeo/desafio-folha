@@ -91,6 +91,13 @@ class StarSystemController extends Controller
     {
         $star = (string) $request->input('star');
         $counterDefaultStar = (int) self::calculateEngineers($star);
+
+        $validatedData = $request->validate([
+            'star' => 'required | string',
+            'customStar' => 'string | nullable',
+            'engineers' => 'numeric | nullable | min:0',
+        ]);
+
         $request->session()->flash('default', "A quantidade de engenheiros para a estrela $star é $counterDefaultStar");
 
         if ($request->filled('customStar'))
