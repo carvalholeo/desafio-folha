@@ -42,7 +42,7 @@
                 </div>
                 <div class="form-group">
                     <label for="engineers">Quantidade de engenheiros</label>
-                    <input type="number" id="engineers" name="engineers" class="form-control" placeholder="Digite a quantidade de engenheiros" min=1>
+                    <input type="number" id="engineers" name="engineers" class="form-control" placeholder="Digite a quantidade de engenheiros" min=0>
                 </div>
                 <button type="submit" class="btn btn-primary" id="submit">Enviar</button>
                 <button type="cancel" class="btn btn-danger" id="cancel">Apagar</button>
