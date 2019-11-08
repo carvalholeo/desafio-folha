@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <label for="star">Sistema Estelar</label>
                     <select id="star" name="star" class="form-control" required>
-                        <option disabled selected>Escolha uma opção</option>
+                        <option disabled>Escolha uma opção</option>
                         <option value="SIRIUS">SIRIUS</option>
                         <option value="LALANDE">LALANDE</option>
                         <option value="PROCION">PROCION</option>
