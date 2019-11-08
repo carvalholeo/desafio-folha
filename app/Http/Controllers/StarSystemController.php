@@ -18,20 +18,23 @@ class StarSystemController extends Controller
     {
         $counter = 1;
         for ($i = 0; $i < strlen($star); $i++) {
-            if ($star[$i] == 'A')
-                $counter *= 1;
-            
-            if ($star[$i] == 'E')
-                $counter *= 2;
-            
-            if ($star[$i] == 'I')
-                $counter *= 3;
-
-            if ($star[$i] == 'O')
-                $counter *= 5;
-            
-            if ($star[$i] == 'U')
-                $counter *= 8;
+            switch ($star[$i]) {
+                case 'A':
+                    $counter *= 1;
+                    break;
+                case 'E':
+                    $counter *= 2;
+                    break;
+                case 'I':
+                    $counter *= 3;
+                    break;
+                case 'O':
+                    $counter *= 5;
+                    break;
+                case 'U':
+                    $counter *= 8;
+                    break;
+            }
         }
         return $counter;
     }
