@@ -12,8 +12,7 @@ Para execução deste código, é necessário:
 
 Para fazer a primeira execução em sua máquina, você pode utilizar um dos seguintes scripts:
 
--firstTimeWindows.bat (para usar com o sistema operacional Windows)
--firstTimeUnixLike.sh (para usar com os sistemas baseados em Linux, Unix e Mac)
+-firstRun.bat
 
 Você só precisa executar um deles, e apenas na primeira vez que baixar o código-fonte. Após, execute apenas, via terminal (em qualquer um dos sistemas):
 
